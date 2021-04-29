@@ -20,6 +20,7 @@
 		CAB193C6263ADFBF00E27B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB193C9263ADFBF00E27B22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAB193CB263ADFBF00E27B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB193D2263AE07E00E27B22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		CAB193B6263ADFBE00E27B22 = {
 			isa = PBXGroup;
 			children = (
+				CAB193D2263AE07E00E27B22 /* README.md */,
 				CAB193C1263ADFBE00E27B22 /* laFiesta */,
 				CAB193C0263ADFBE00E27B22 /* Products */,
 			);
