@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State var selectedView = 1
+struct HomeView: View {
+    @State var selectedView = 2
     var primaryColor: Color  = Color(UIColor(red: 0.11, green: 0.11, blue: 0.11, alpha: 1.00))
     var accentColor: Color  = Color(UIColor(red: 0.30, green: 0.82, blue: 0.80, alpha: 1.00))
     
@@ -28,6 +28,7 @@ struct ContentView: View {
                 
                 ZStack {
                     primaryColor.edgesIgnoringSafeArea(.all)
+                    ExploreEvents()
                 }
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
@@ -55,7 +56,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
             .previewDevice("iPhone 12 Pro")
     }
 }

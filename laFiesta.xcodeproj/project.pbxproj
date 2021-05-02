@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		854BB6CC263EE9EB007E4813 /* ExploreEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BB6CB263EE9EB007E4813 /* ExploreEvents.swift */; };
+		854BB6D0263F491C007E4813 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BB6CF263F491C007E4813 /* Event.swift */; };
+		854BB6D3263F4D2D007E4813 /* festa-front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854BB6D2263F4D2D007E4813 /* festa-front.jpg */; };
+		854BB6D5263F4D6E007E4813 /* festa-estrelas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854BB6D4263F4D6E007E4813 /* festa-estrelas.jpg */; };
+		854BB6D7263F4DA2007E4813 /* festa-das-cores.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854BB6D6263F4DA2007E4813 /* festa-das-cores.jpg */; };
+		854BB6D9263F4DCA007E4813 /* festa-kaus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854BB6D8263F4DCA007E4813 /* festa-kaus.jpg */; };
 		CAB193C3263ADFBE00E27B22 /* laFiestaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB193C2263ADFBE00E27B22 /* laFiestaApp.swift */; };
-		CAB193C5263ADFBE00E27B22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB193C4263ADFBE00E27B22 /* ContentView.swift */; };
+		CAB193C5263ADFBE00E27B22 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB193C4263ADFBE00E27B22 /* Home.swift */; };
 		CAB193C7263ADFBF00E27B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB193C6263ADFBF00E27B22 /* Assets.xcassets */; };
 		CAB193CA263ADFBF00E27B22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB193C9263ADFBF00E27B22 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		854BB6CB263EE9EB007E4813 /* ExploreEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEvents.swift; sourceTree = "<group>"; };
+		854BB6CF263F491C007E4813 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		854BB6D2263F4D2D007E4813 /* festa-front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "festa-front.jpg"; sourceTree = "<group>"; };
+		854BB6D4263F4D6E007E4813 /* festa-estrelas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "festa-estrelas.jpg"; sourceTree = "<group>"; };
+		854BB6D6263F4DA2007E4813 /* festa-das-cores.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "festa-das-cores.jpg"; sourceTree = "<group>"; };
+		854BB6D8263F4DCA007E4813 /* festa-kaus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "festa-kaus.jpg"; sourceTree = "<group>"; };
 		CAB193BF263ADFBE00E27B22 /* laFiesta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = laFiesta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB193C2263ADFBE00E27B22 /* laFiestaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laFiestaApp.swift; sourceTree = "<group>"; };
-		CAB193C4263ADFBE00E27B22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CAB193C4263ADFBE00E27B22 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CAB193C6263ADFBF00E27B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB193C9263ADFBF00E27B22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAB193CB263ADFBF00E27B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +46,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		854BB6CD263F48D5007E4813 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				854BB6CF263F491C007E4813 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		854BB6CE263F48EA007E4813 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				854BB6CB263EE9EB007E4813 /* ExploreEvents.swift */,
+				CAB193C4263ADFBE00E27B22 /* Home.swift */,
+				CAB193C2263ADFBE00E27B22 /* laFiestaApp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		854BB6D1263F4AF7007E4813 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				854BB6D2263F4D2D007E4813 /* festa-front.jpg */,
+				854BB6D8263F4DCA007E4813 /* festa-kaus.jpg */,
+				854BB6D6263F4DA2007E4813 /* festa-das-cores.jpg */,
+				854BB6D4263F4D6E007E4813 /* festa-estrelas.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		CAB193B6263ADFBE00E27B22 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +95,9 @@
 		CAB193C1263ADFBE00E27B22 /* laFiesta */ = {
 			isa = PBXGroup;
 			children = (
-				CAB193C2263ADFBE00E27B22 /* laFiestaApp.swift */,
-				CAB193C4263ADFBE00E27B22 /* ContentView.swift */,
+				854BB6D1263F4AF7007E4813 /* Images */,
+				854BB6CD263F48D5007E4813 /* Models */,
+				854BB6CE263F48EA007E4813 /* Views */,
 				CAB193C6263ADFBF00E27B22 /* Assets.xcassets */,
 				CAB193CB263ADFBF00E27B22 /* Info.plist */,
 				CAB193C8263ADFBF00E27B22 /* Preview Content */,
@@ -128,8 +170,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				854BB6D5263F4D6E007E4813 /* festa-estrelas.jpg in Resources */,
+				854BB6D7263F4DA2007E4813 /* festa-das-cores.jpg in Resources */,
 				CAB193CA263ADFBF00E27B22 /* Preview Assets.xcassets in Resources */,
+				854BB6D9263F4DCA007E4813 /* festa-kaus.jpg in Resources */,
 				CAB193C7263ADFBF00E27B22 /* Assets.xcassets in Resources */,
+				854BB6D3263F4D2D007E4813 /* festa-front.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB193C5263ADFBE00E27B22 /* ContentView.swift in Sources */,
+				854BB6D0263F491C007E4813 /* Event.swift in Sources */,
+				CAB193C5263ADFBE00E27B22 /* Home.swift in Sources */,
+				854BB6CC263EE9EB007E4813 /* ExploreEvents.swift in Sources */,
 				CAB193C3263ADFBE00E27B22 /* laFiestaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
