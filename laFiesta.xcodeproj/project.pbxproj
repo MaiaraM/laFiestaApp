@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73D185A026407110002CCB64 /* misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D1859F26407110002CCB64 /* misc.swift */; };
+		73D185A22640714F002CCB64 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D185A12640714F002CCB64 /* EventDetail.swift */; };
+		73D185A426407368002CCB64 /* COVER.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D185A326407368002CCB64 /* COVER.png */; };
 		854BB6CC263EE9EB007E4813 /* ExploreEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BB6CB263EE9EB007E4813 /* ExploreEvents.swift */; };
 		854BB6D0263F491C007E4813 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BB6CF263F491C007E4813 /* Event.swift */; };
 		854BB6D3263F4D2D007E4813 /* festa-front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854BB6D2263F4D2D007E4813 /* festa-front.jpg */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73D1859F26407110002CCB64 /* misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = misc.swift; sourceTree = "<group>"; };
+		73D185A12640714F002CCB64 /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
+		73D185A326407368002CCB64 /* COVER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = COVER.png; path = ../../../../../Downloads/COVER.png; sourceTree = "<group>"; };
 		854BB6CB263EE9EB007E4813 /* ExploreEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEvents.swift; sourceTree = "<group>"; };
 		854BB6CF263F491C007E4813 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		854BB6D2263F4D2D007E4813 /* festa-front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "festa-front.jpg"; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 				854BB6CB263EE9EB007E4813 /* ExploreEvents.swift */,
 				CAB193C4263ADFBE00E27B22 /* Home.swift */,
 				CAB193C2263ADFBE00E27B22 /* laFiestaApp.swift */,
+				73D185A12640714F002CCB64 /* EventDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -67,6 +74,7 @@
 		854BB6D1263F4AF7007E4813 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				73D185A326407368002CCB64 /* COVER.png */,
 				854BB6D2263F4D2D007E4813 /* festa-front.jpg */,
 				854BB6D8263F4DCA007E4813 /* festa-kaus.jpg */,
 				854BB6D6263F4DA2007E4813 /* festa-das-cores.jpg */,
@@ -95,6 +103,7 @@
 		CAB193C1263ADFBE00E27B22 /* laFiesta */ = {
 			isa = PBXGroup;
 			children = (
+				73D1859F26407110002CCB64 /* misc.swift */,
 				854BB6D1263F4AF7007E4813 /* Images */,
 				854BB6CD263F48D5007E4813 /* Models */,
 				854BB6CE263F48EA007E4813 /* Views */,
@@ -173,6 +182,7 @@
 				854BB6D5263F4D6E007E4813 /* festa-estrelas.jpg in Resources */,
 				854BB6D7263F4DA2007E4813 /* festa-das-cores.jpg in Resources */,
 				CAB193CA263ADFBF00E27B22 /* Preview Assets.xcassets in Resources */,
+				73D185A426407368002CCB64 /* COVER.png in Resources */,
 				854BB6D9263F4DCA007E4813 /* festa-kaus.jpg in Resources */,
 				CAB193C7263ADFBF00E27B22 /* Assets.xcassets in Resources */,
 				854BB6D3263F4D2D007E4813 /* festa-front.jpg in Resources */,
@@ -186,10 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D185A026407110002CCB64 /* misc.swift in Sources */,
 				854BB6D0263F491C007E4813 /* Event.swift in Sources */,
 				CAB193C5263ADFBE00E27B22 /* Home.swift in Sources */,
 				854BB6CC263EE9EB007E4813 /* ExploreEvents.swift in Sources */,
 				CAB193C3263ADFBE00E27B22 /* laFiestaApp.swift in Sources */,
+				73D185A22640714F002CCB64 /* EventDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
