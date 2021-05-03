@@ -28,7 +28,7 @@ struct HomeView: View {
                 
                 ZStack {
                     primaryColor.edgesIgnoringSafeArea(.all)
-                    ExploreEvents()
+                    EventDetail()
                 }
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")

@@ -3,13 +3,7 @@ import Foundation
 import SwiftUI
 
 struct ExploreEvents: View {
-    private var events = [
-        Event(name: "Festa Front", date: "23 ago", address: "Pink - Campinas", image: "festa-front.jpg"),
-        Event(name: "Festa das Estrelas", date: "24 ago", address: "Pink - Campinas", image: "festa-estrelas.jpg"),
-        Event(name: "Festa das Cores", date: "25 ago", address: "Pink - Campinas", image: "festa-das-cores.jpg"),
-        Event(name: "Festa Kaus", date: "26 ago", address: "Pink - Campinas", image: "festa-kaus.jpg"),
-    ]
-    
+
     private var events2 = [
         Event(name: "Festa Kaus", date: "26 ago", address: "Pink - Campinas", image: "festa-kaus.jpg"),
     ]
