@@ -8,10 +8,17 @@
 import Foundation
 import SwiftUI
 
-struct EventModel: Identifiable {
-    let id = UUID()
+struct EventModel: Hashable, Codable  {
+    let id:UUID
     let name: String
     let date: String
-    let address: String
-    let image: UIImage
+    let local: String
+
+    private var imageName: String
+    var image: Image {
+        Image(imageName)
+    }
+    let description:String
+    let saved:Bool
+
 }
