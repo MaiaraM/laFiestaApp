@@ -9,17 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
     @State var selectedView = 2
-    var primaryColor: Color  = Color(UIColor(red: 0.11, green: 0.11, blue: 0.11, alpha: 1.00))
-    var accentColor: Color  = Color(UIColor(red: 0.30, green: 0.82, blue: 0.80, alpha: 1.00))
+   
     
     init() {
-        UITabBar.appearance().barTintColor = UIColor(red: 0.11, green: 0.11, blue: 0.11, alpha: 1.00)
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.3882352941, green: 0.3882352941, blue: 0.4, alpha: 1)
     }
     
     var body: some View {
             TabView(selection: $selectedView) {
                 ZStack {
-                    primaryColor.edgesIgnoringSafeArea(.all)
+                    Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all)
+                    EventDetailView()
                 }
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
@@ -27,8 +27,8 @@ struct HomeView: View {
                 .tag(1)
                 
                 ZStack {
-                    primaryColor.edgesIgnoringSafeArea(.all)
-                    EventDetail()
+                    Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all)
+                    ExploreEventsView()
                 }
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
@@ -36,7 +36,7 @@ struct HomeView: View {
                 .tag(2)
                 
                 ZStack {
-                    primaryColor.edgesIgnoringSafeArea(.all)
+                    Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all)
                 }
                 .tabItem {
                     Label("Score", systemImage: "star.leadinghalf.fill")
@@ -44,13 +44,13 @@ struct HomeView: View {
                 .tag(3)
                 
                 ZStack {
-                    primaryColor.edgesIgnoringSafeArea(.all)
+                    Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all)
                 }
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
                 .tag(4)
-            }.accentColor(accentColor)
+            }.accentColor(Color(#colorLiteral(red: 0.2980392157, green: 0.8156862745, blue: 0.8, alpha: 1)))
         }
 }
 
