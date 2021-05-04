@@ -2,15 +2,14 @@
 import Foundation
 import SwiftUI
 
-struct ExploreEvents: View {
+struct ExploreEventsView: View {
 
     private var events2 = [
-        Event(name: "Festa Kaus", date: "26 ago", address: "Pink - Campinas", image: "festa-kaus.jpg"),
+        EventModel(name: "Festa Kaus", date: "26 ago", address: "Pink - Campinas", image: #imageLiteral(resourceName: "festa-kaus.jpg")),
     ]
     
     @State public var search: String = ""
-    let color = Color(red: 235 / 255, green: 235 / 255, blue: 245 / 255, opacity: 0.6)
-    let color2 = Color(red: 118 / 255, green: 118 / 255, blue: 128 / 255, opacity: 0.24)
+    
     var body: some View {
         VStack(alignment: .leading){
             Text("Explore Events")
@@ -25,16 +24,16 @@ struct ExploreEvents: View {
             
             ZStack(alignment: .leading) {
                 TextField("Search...", text: $search)
-                    .background(color2)
+                    .background(Color(#colorLiteral(red: 0.462745098, green: 0.462745098, blue: 0.5019607843, alpha: 1)))
                     .font(.system(size: 17))
-                    .foregroundColor(color)
+                    .foregroundColor(Color(#colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 1)))
                     
                     if search == "" {
                         HStack{
                             Image(systemName: "magnifyingglass")
-                                .foregroundColor(color)
+                                .foregroundColor(Color(#colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 1)))
                             
-                            Text("Search...").foregroundColor(color)
+                            Text("Search...").foregroundColor(Color(#colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 1)))
                         }.font(.system(size: 17))
                     }
             }
@@ -44,7 +43,7 @@ struct ExploreEvents: View {
                     VStack(spacing: 0){
                         ForEach(events) { event in
                             
-                            Image(uiImage: UIImage(named: event.image)!)
+                            Image(uiImage: event.image)
                                 .resizable()
                                 .frame(width: 370, height: 200, alignment: .center)
                             
@@ -89,7 +88,7 @@ struct ExploreEvents: View {
                     VStack(spacing: 0){
                         ForEach(events2) { event in
                             
-                            Image(uiImage: UIImage(named: event.image)!)
+                            Image(uiImage: event.image)
                                 .resizable()
                                 .frame(width: 370, height: 200, alignment: .center)
                             

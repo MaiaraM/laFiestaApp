@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct EventDetail: View {
-    var eventSelected: Event = events[3]
+struct EventDetailView: View {
+    var eventSelected: EventModel = events[3]
         var tableTitles = ["Date", "Time", "Place", "Price"]
-        var accentColor: Color  = Color(UIColor(red: 0.30, green: 0.82, blue: 0.80, alpha: 1.00))
         
     
     var body: some View {
@@ -20,7 +19,7 @@ struct EventDetail: View {
                     Color.clear
                     VStack(alignment: .leading) {
                         
-                        Text(eventSelected.name)
+                        Text(verbatim: eventSelected.name)
                             .foregroundColor(.white)
                             .font(.system(size: 34))
                             .fontWeight(.bold)
@@ -36,11 +35,11 @@ struct EventDetail: View {
                         
                     }
                 }
-                .background(Image(uiImage: UIImage(named: "COVER")!)
-                                .resizable()
-                                .frame(width: 400, height: 462, alignment: .top), alignment: .top)
+//                .background(Image(uiImage: UIImage(named: "COVER")!)
+//                                .resizable()
+//                                .frame(width: 400, height: 462, alignment: .top), alignment: .top)
                 
-                .background(Image(uiImage: UIImage(named: events[3].image)!)
+                .background(Image(uiImage: events[3].image)
                                 .resizable()
                                 .frame(width: 400, height: 462, alignment: .top), alignment: .top)
                 .background(Color.black)
@@ -80,7 +79,7 @@ struct EventDetail: View {
                         
                         .foregroundColor(.white)
                         .padding()
-                        .background(accentColor)
+                        .background(Color(#colorLiteral(red: 0.2980392157, green: 0.8156862745, blue: 0.8, alpha: 1)))
                         .cornerRadius(14)
                 }
                 .padding(.top, 32.0)
@@ -96,7 +95,7 @@ struct EventDetail: View {
 
 struct EventDetail_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetail()
+        EventDetailView()
             .previewDevice("iPhone 12 Pro")
     }
 }
