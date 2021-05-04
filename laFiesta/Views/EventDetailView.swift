@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventDetailView: View {
-    var eventSelected: EventModel = events[3]
+    var eventSelected: EventModel = eventsData[3]
         var tableTitles = ["Date", "Time", "Place", "Price"]
         
     
@@ -39,7 +39,7 @@ struct EventDetailView: View {
 //                                .resizable()
 //                                .frame(width: 400, height: 462, alignment: .top), alignment: .top)
                 
-                .background(Image(uiImage: events[3].image)
+                .background(eventsData[3].image
                                 .resizable()
                                 .frame(width: 400, height: 462, alignment: .top), alignment: .top)
                 .background(Color.black)
@@ -52,7 +52,7 @@ struct EventDetailView: View {
                 
                 ForEach((0...3), id: \.self) {
                     let id = ($0)
-                    let eventInfos = [eventSelected.date, "19h - 23h", eventSelected.address, "R$ 80,00"]
+                    let eventInfos = [eventSelected.date, "19h - 23h", eventSelected.local, "R$ 80,00"]
                     HStack {
                         Text(tableTitles[id])
                             .foregroundColor(.white)
