@@ -42,93 +42,23 @@ struct ExploreEventsView: View {
 
             if search == "" {
                 List(){
-//                    VStack(spacing: 0){
-//                        ForEach(eventsData) { event in
-//
-////                            event.image
-////                                .resizable()
-////                                .frame(width: 370, height: 200, alignment: .center)
-//
-//                            HStack{
-//                                Text(event.date)
-//                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                                    .foregroundColor(.white)
-//                                    .font(.system(size: 14))
-//                                    .offset(y: 10)
-//
-//                                Circle()
-//                                    .fill(Color(red: 76 / 255, green: 208 / 255, blue: 204 / 255))
-//                                    .frame(width: 5, height: 5)
-//                                    .offset(y: 12)
-//
-//                                Text(event.name)
-//                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                                    .foregroundColor(.white)
-//                                    .font(.system(size: 17))
-//                                    .offset(y: 10)
-//                            }
-//                            .frame(width: 370, height: 27, alignment: .topLeading)
-//                            .background(Color.black)
-//                            .opacity(0.9)
-//
-//                            HStack{
-//                                Text(event.local)
-//                                    .foregroundColor(.white)
-//                                    .font(.system(size: 13))
-//                                    .offset(y: 10)
-//                            }
-//                            .frame(width: 370, height: 40, alignment: .topLeading)
-//                            .background(Color.black)
-//                            .opacity(0.9)
-//                        }
-//                    }
-//                    .offset(x: -20, y: -20)
+                    VStack(spacing: 0){
+                        ForEach(events2, id: \.self) { event in
+                            EventCardView(eventForCard: event)
+                        }
+                    }
+                    .offset(x: -20, y: -6)
                 }
             }
             else{
-                List{
+//                List{
 //                    VStack(spacing: 0){
-//                        ForEach(events2) { event in
-//
-////                            event.image
-////                                .resizable()
-////                                .frame(width: 370, height: 200, alignment: .center)
-//
-//                            HStack{
-//                                Text(event.date)
-//                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                                    .foregroundColor(.white)
-//                                    .font(.system(size: 14))
-//                                    .offset(y: 10)
-//
-//                                Circle()
-//                                    .fill(Color(red: 76 / 255, green: 208 / 255, blue: 204 / 255))
-//                                    .frame(width: 5, height: 5)
-//                                    .offset(y: 12)
-//
-//                                Text(event.name)
-//                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                                    .foregroundColor(.white)
-//                                    .font(.system(size: 17))
-//                                    .offset(y: 10)
-//                            }
-//                            .frame(width: 370, height: 27, alignment: .topLeading)
-//                            .background(Color.black)
-//                            .opacity(0.9)
-//
-//                            HStack{
-//                                Text(event.local)
-//                                    .foregroundColor(.white)
-//                                    .font(.system(size: 13))
-//                                    .offset(y: 10)
-//                            }
-//                            .frame(width: 370, height: 370, alignment: .topLeading)
-//                            .background(Color.black)
-//                            .opacity(0.9)
+//                        ForEach(events2, id: \.self) { event in
+//                            EventCardView(eventForCard: event2)
 //                        }
 //                    }
 //                    .offset(x: -20, y: -20)
-                }
+//                }
             }
         }.padding()
     }
