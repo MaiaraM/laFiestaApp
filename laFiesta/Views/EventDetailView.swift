@@ -35,13 +35,13 @@ struct EventDetailView: View {
                         
                     }
                 }
-//                .background(Image(uiImage: UIImage(named: "COVER")!)
-//                                .resizable()
-//                                .frame(width: 400, height: 462, alignment: .top), alignment: .top)
-                
-                .background(eventsData[3].image
+                .background(Image(uiImage: UIImage(named: "COVER")!)
                                 .resizable()
-                                .frame(width: 400, height: 462, alignment: .top), alignment: .top)
+                                .frame(width: 400, height: 420, alignment: .top), alignment: .top)
+                
+                .background(Image("festa-das-cores")
+                                .resizable()
+                                .frame(width: 400, height: 400, alignment: .top), alignment: .top)
                 .background(Color.black)
                 .ignoresSafeArea()
                 
@@ -86,9 +86,9 @@ struct EventDetailView: View {
             }
             .padding(.horizontal, 16.0)
         }
-        .ignoresSafeArea()
         .padding(.bottom, 68.0)
         .background(Color.black)
+        .ignoresSafeArea(.all)
         
     }
 }
