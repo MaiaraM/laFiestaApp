@@ -10,25 +10,61 @@ import SwiftUI
 
 
 struct HomeView: View {
+    var events:[EventModel]
+    
     init() {
-        print(eventsData);
+        events = eventsData;
         UITableView.appearance().separatorStyle = .none
-       UITableViewCell.appearance().backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-       UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
     }
     
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Explore Events")
-                .foregroundColor(.white)
-                .font(.system(size: 34))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            
-            Text("Start looking for events names and places")
-                .foregroundColor(.white)
-                .font(.system(size: 15))
-                .padding(.bottom)
-            
-        }.background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all))
+        NavigationView{
+            ZStack{
+                Color.black.ignoresSafeArea()
+                VStack(alignment: .leading){
+                    Text("Events for you, Carolina")
+                        .foregroundColor(.white)
+                        .font(.system(size: 24))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    
+                    Text("Campinas, SP")
+                        .foregroundColor(.white)
+                        .font(.system(size: 15))
+                        .padding(.bottom)
+                        ScrollView(.horizontal, showsIndicators: true){
+                            HStack(spacing: 20){
+                            ForEach(events, id: \.self) { event in
+                                LocalCardView(localForCard: event)
+                            }
+                        }
+                    }
+                    
+                    Text("Events you Liked")
+                        .foregroundColor(.white)
+                        .font(.system(size: 24))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    
+                    ZStack {
+                        ScrollView(){
+                            ForEach(events, id: \.self) { event in
+                                EventCardView(eventForCard: event)
+                            }
+                        }
+                        
+                        
+                    }
+                }.padding()
+                .navigationBarHidden(true)
+            }
+        }
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+            .previewDevice("iPhone 12 Pro")
     }
 }

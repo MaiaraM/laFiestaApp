@@ -71,3 +71,9 @@ struct ExploreEventsView: View {
     }
 }
 
+struct ExploreView_Previews: PreviewProvider {
+    static var previews: some View {
+        ExploreEventsView()
+            .previewDevice("iPhone 12 Pro")
+    }
+}
