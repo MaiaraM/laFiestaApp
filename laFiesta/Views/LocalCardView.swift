@@ -1,44 +1,35 @@
 //
-//  EventCardView.swift
+//  LocalCardView.swift
 //  laFiesta
 //
-//  Created by Caroline Andreoni Barcat Intaschi on 04/05/21.
+//  Created by Maiara Martins on 06/05/21.
 //
 
 import SwiftUI
 
-struct EventCardView: View {
-    var eventForCard: EventModel
+struct LocalCardView: View {
+    var localForCard: EventModel
     @State var saved : Bool = false
-
-    init(eventForCard:EventModel) {
-        self.eventForCard = eventForCard
-        self.saved = eventForCard.saved
+    
+    init(localForCard:EventModel) {
+        self.localForCard = localForCard
+        self.saved = localForCard.saved
     }
     
     var body: some View {
         ZStack(alignment: .topTrailing){
-
         VStack(alignment: .leading, spacing: 10){
-            NavigationLink(destination: EventDetailView(eventSelected: eventForCard)){
-                Image(eventForCard.imageName)
+            NavigationLink(destination: EventDetailView(eventSelected: localForCard)){
+                Image(localForCard.imageName)
                     .resizable()
-                    .frame(height: 150, alignment: .center)
+                    .scaledToFill()
+                    .frame(width:150,height: 100, alignment: .center)
                     .cornerRadius(22)
                 
             }
             VStack(alignment: .leading, spacing: 0){
                 HStack{
-                    Text(eventForCard.date)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(.white)
-                        .font(.system(size: 14))
-                    
-                    Circle()
-                        .fill(Color(red: 76 / 255, green: 208 / 255, blue: 204 / 255))
-                        .frame(width: 5, height: 5)
-                    
-                    Text(eventForCard.name)
+                    Text(localForCard.name)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .foregroundColor(.white)
                         .font(.system(size: 17))
@@ -46,7 +37,15 @@ struct EventCardView: View {
                 .frame(height: 25, alignment: .center)
                 
                 HStack{
-                    Text(verbatim: eventForCard.local)
+                    Text(localForCard.date)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14))
+                    
+                    Circle()
+                        .fill(Color(red: 76 / 255, green: 208 / 255, blue: 204 / 255))
+                        .frame(width: 5, height: 5)
+                    Text(verbatim: localForCard.local)
                         .foregroundColor(.white)
                         .font(.system(size: 13))
                 }
@@ -54,8 +53,6 @@ struct EventCardView: View {
             }
             
         }
-        .background(Color.black)
-        .frame(width: 370)
             HStack{
                 Button(action: {
                     self.saved = !self.saved
@@ -70,15 +67,15 @@ struct EventCardView: View {
                 })
                
             }.padding(5)
+
         }
-        
+        .background(Color.black)
+        .frame(width: 150)
     }
-    
 }
 
-
-struct EventCardView_Previews: PreviewProvider {
+struct LocalCardView_Previews: PreviewProvider {
     static var previews: some View {
-        EventCardView(eventForCard: eventsData[3])
+        LocalCardView(localForCard: eventsData[2])
     }
 }

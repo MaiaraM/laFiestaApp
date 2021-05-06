@@ -14,46 +14,51 @@ struct HomeView: View {
     
     init() {
         events = eventsData;
-     
+        UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
     }
     
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Explore Events")
-                .foregroundColor(.white)
-                .font(.system(size: 34))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-            
-            Text("Start looking for events names and places")
-                .foregroundColor(.white)
-                .font(.system(size: 15))
-                .padding(.bottom)
-            
-            ZStack(alignment: .top) {
-                Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-                List(events, id: \.id) { event in
-                       EventCardView(eventForCard: event)
-                   }
-                    .font(.title)
-                }
-
-
-            NavigationView{
-                 List(events, id: \.id) { event in
-                        EventCardView(eventForCard: event)
-                    }.listRowBackground(Color.red)
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
-                    .background(Color.yellow)
-
+        NavigationView{
+            ZStack{
+                Color.black.ignoresSafeArea()
+                VStack(alignment: .leading){
+                    Text("Events for you, Carolina")
+                        .foregroundColor(.white)
+                        .font(.system(size: 24))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     
-                }
-        
-        
-           
-            
-            
-        }.background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all))
+                    Text("Campinas, SP")
+                        .foregroundColor(.white)
+                        .font(.system(size: 15))
+                        .padding(.bottom)
+                        ScrollView(.horizontal, showsIndicators: true){
+                            HStack(spacing: 20){
+                            ForEach(events, id: \.self) { event in
+                                LocalCardView(localForCard: event)
+                            }
+                        }
+                    }
+                    
+                    Text("Events you Liked")
+                        .foregroundColor(.white)
+                        .font(.system(size: 24))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    
+                    ZStack {
+                        ScrollView(){
+                            ForEach(events, id: \.self) { event in
+                                EventCardView(eventForCard: event)
+                            }
+                        }
+                        
+                        
+                    }
+                }.padding()
+                .navigationBarHidden(true)
+            }
+        }
     }
 }
 

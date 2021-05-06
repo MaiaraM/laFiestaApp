@@ -20,6 +20,7 @@
 		CAB193C5263ADFBE00E27B22 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB193C4263ADFBE00E27B22 /* BaseView.swift */; };
 		CAB193C7263ADFBF00E27B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB193C6263ADFBF00E27B22 /* Assets.xcassets */; };
 		CAB193CA263ADFBF00E27B22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB193C9263ADFBF00E27B22 /* Preview Assets.xcassets */; };
+		CAFD1A04264405E20053921C /* LocalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFD1A03264405E20053921C /* LocalCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		CAB193C9263ADFBF00E27B22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAB193CB263ADFBF00E27B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB193D2263AE07E00E27B22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CAFD1A03264405E20053921C /* LocalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				731569E22642B77B00412662 /* QRCode.swift */,
 				CA8130F526416FC0002B218B /* HomeView.swift */,
 				73923B3B2641A9650015E952 /* EventCardView.swift */,
+				CAFD1A03264405E20053921C /* LocalCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				CAB193C5263ADFBE00E27B22 /* BaseView.swift in Sources */,
 				854BB6CC263EE9EB007E4813 /* ExploreEventsView.swift in Sources */,
 				CAB193C3263ADFBE00E27B22 /* laFiestaApp.swift in Sources */,
+				CAFD1A04264405E20053921C /* LocalCardView.swift in Sources */,
 				731569E32642B77B00412662 /* QRCode.swift in Sources */,
 				73923B3C2641A9650015E952 /* EventCardView.swift in Sources */,
 				73D185A22640714F002CCB64 /* EventDetailView.swift in Sources */,
