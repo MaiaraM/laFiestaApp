@@ -13,7 +13,7 @@ struct EventCardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             NavigationLink(destination: EventDetailView(eventSelected: eventForCard)){
-                Image("festa-das-cores")
+                Image(eventForCard.imageName)
                     .resizable()
                     .frame(height: 150, alignment: .center)
                     .cornerRadius(22)
@@ -45,7 +45,9 @@ struct EventCardView: View {
                 .frame(height: 25, alignment: .center)
             }
             
-        }.background(Color.black)
+        }
+        .background(Color.black)
+        .frame(width: 370)
         
     }
     

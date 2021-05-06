@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseView: View {
-    @State var selectedView = 1
+    @State var selectedView = 2
    
     
     init() {
@@ -38,9 +38,11 @@ struct BaseView: View {
                 
                 ZStack {
                     Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all)
+                    ScoreView()
                 }
                 .tabItem {
                     Label("Score", systemImage: "star.leadinghalf.fill")
+                    
                 }
                 .tag(3)
                 
