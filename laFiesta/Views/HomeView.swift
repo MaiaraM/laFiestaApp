@@ -10,11 +10,11 @@ import SwiftUI
 
 
 struct HomeView: View {
+    var events:[EventModel]
+    
     init() {
-        print(eventsData);
-        UITableView.appearance().separatorStyle = .none
-       UITableViewCell.appearance().backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-       UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        events = eventsData;
+     
     }
     
     var body: some View {
@@ -29,6 +29,37 @@ struct HomeView: View {
                 .font(.system(size: 15))
                 .padding(.bottom)
             
+            ZStack(alignment: .top) {
+                Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+                List(events, id: \.id) { event in
+                       EventCardView(eventForCard: event)
+                   }
+                    .font(.title)
+                }
+
+
+            NavigationView{
+                 List(events, id: \.id) { event in
+                        EventCardView(eventForCard: event)
+                    }.listRowBackground(Color.red)
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+                    .background(Color.yellow)
+
+                    
+                }
+        
+        
+           
+            
+            
         }.background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).edgesIgnoringSafeArea(.all))
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+            .previewDevice("iPhone 12 Pro")
     }
 }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct EventDetailView: View {
-    var eventSelected: EventModel = eventsData[3]
-        var tableTitles = ["Date", "Time", "Place", "Price"]
+    var eventSelected: EventModel
+    let tableTitles = ["Date", "Time", "Place", "Price"]
+    
         
     
     var body: some View {
@@ -95,7 +96,7 @@ struct EventDetailView: View {
 
 struct EventDetail_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetailView()
+        EventDetailView(eventSelected: eventsData[3])
             .previewDevice("iPhone 12 Pro")
     }
 }
