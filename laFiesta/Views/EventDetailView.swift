@@ -12,6 +12,8 @@ import SwiftUI
 struct EventDetailView: View {
     var eventSelected: EventModel
     let tableTitles = ["Date", "Time", "Place", "Price"]
+    @State var saved : Bool = true
+
     
     init(eventSelected:EventModel) {
         self.eventSelected = eventSelected
@@ -26,28 +28,44 @@ struct EventDetailView: View {
         UINavigationBar.appearance().compactAppearance = coloredAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
     }
+
     
     var body: some View {
-        return  ScrollView{
-            VStack{
-                ZStack(alignment: .topLeading) {
-                    Color.clear
-                    VStack(alignment: .leading) {
+            ScrollView{
+                VStack{
+                    ZStack(alignment: .topLeading) {
+                        Color.clear
                         
-                        Text(verbatim: eventSelected.name)
-                            .foregroundColor(.white)
-                            .font(.system(size: 34))
-                            .fontWeight(.bold)
-                            .padding(.bottom)
-                            .padding(.top, 250.0)
-                        
-                        Text("Organization Name")
-                            .foregroundColor(.white)
-                            .font(.system(size: 15))
-                            .fontWeight(.bold)
-                            .padding(.bottom)
-                        
-                        
+                        VStack(alignment: .leading) {
+                            
+                            HStack{
+                                Text(verbatim: eventSelected.name)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 34))
+                                    .fontWeight(.bold)
+                                    .padding(.bottom)
+                                    .padding(.top, 250.0)
+                                
+                                Button(action: {
+                                    self.saved = !self.saved
+                                }, label: {
+                                    Image(systemName: self.saved ? "heart.fill" : "heart")
+                                    .resizable()
+                                    .padding(10)
+                                    .scaledToFill()
+                                    .frame(width:40,height: 40, alignment: .center)
+                                    .foregroundColor(.white)
+                                    .background(Color(#colorLiteral(red: 0.06796951864, green: 0.04477881282, blue: 0.0748642597, alpha: 0.6573518006)).cornerRadius(22))
+                                }).padding(.top, 235.0)
+                            }
+                            
+                            Text("Organization Name")
+                                .foregroundColor(.white)
+                                .font(.system(size: 15))
+                                .fontWeight(.bold)
+                                .padding(.bottom)
+                        }
+
                     }
                 }
                 .background(Image(uiImage: UIImage(named: "COVER")!)
@@ -99,15 +117,17 @@ struct EventDetailView: View {
                             .background(Color(#colorLiteral(red: 0.2980392157, green: 0.8156862745, blue: 0.8, alpha: 1)))
                             .cornerRadius(14)
                     }
+                    .padding(.top, 32.0)
+                    .padding(.bottom, 70.0)
                 }
                 .padding(.top, 32.0)
             }
             .padding(.horizontal, 16.0)
+            .background(Color.black)
+            .ignoresSafeArea(.all)
         }
-        .padding(.bottom, 120.0)
-        .background(Color.black)
-        .ignoresSafeArea(.all)
-    }
+        
+
 }
 
 struct EventDetail_Previews: PreviewProvider {
