@@ -13,6 +13,7 @@
 		73D185A22640714F002CCB64 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D185A12640714F002CCB64 /* EventDetailView.swift */; };
 		854BB6CC263EE9EB007E4813 /* ExploreEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BB6CB263EE9EB007E4813 /* ExploreEventsView.swift */; };
 		854BB6D0263F491C007E4813 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BB6CF263F491C007E4813 /* EventModel.swift */; };
+		CA415DFC2644201D005B8893 /* PreLauch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA415DFB2644201D005B8893 /* PreLauch.swift */; };
 		CA8130F626416FC0002B218B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8130F526416FC0002B218B /* HomeView.swift */; };
 		CA8130F826417B09002B218B /* laFiesta.json in Resources */ = {isa = PBXBuildFile; fileRef = CA8130F726417B09002B218B /* laFiesta.json */; };
 		CA8130FC26418144002B218B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8130FB26418144002B218B /* ModelData.swift */; };
@@ -30,6 +31,7 @@
 		73D185A12640714F002CCB64 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		854BB6CB263EE9EB007E4813 /* ExploreEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEventsView.swift; sourceTree = "<group>"; };
 		854BB6CF263F491C007E4813 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		CA415DFB2644201D005B8893 /* PreLauch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLauch.swift; sourceTree = "<group>"; };
 		CA8130F526416FC0002B218B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CA8130F726417B09002B218B /* laFiesta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = laFiesta.json; sourceTree = "<group>"; };
 		CA8130FB26418144002B218B /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				CA8130F526416FC0002B218B /* HomeView.swift */,
 				73923B3B2641A9650015E952 /* EventCardView.swift */,
 				CAFD1A03264405E20053921C /* LocalCardView.swift */,
+				CA415DFB2644201D005B8893 /* PreLauch.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				854BB6D0263F491C007E4813 /* EventModel.swift in Sources */,
+				CA415DFC2644201D005B8893 /* PreLauch.swift in Sources */,
 				CA8130FC26418144002B218B /* ModelData.swift in Sources */,
 				CAB193C5263ADFBE00E27B22 /* BaseView.swift in Sources */,
 				854BB6CC263EE9EB007E4813 /* ExploreEventsView.swift in Sources */,
