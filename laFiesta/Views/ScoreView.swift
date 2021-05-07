@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScoreView: View {
     @State var logo = 1
+    var prices = ["50% de desconto do ingresso", "2 margueritas", "1 porção grande de batata frita", "2 canecas de cerveja"]
     
     init() {
         UITableView.appearance().separatorStyle = .none
@@ -19,12 +20,28 @@ struct ScoreView: View {
         NavigationView {
             ZStack{
                 VStack(alignment: .leading, spacing: 0){
-                    Text("Your Score")
+                    Text("Resgate agora")
+                        .foregroundColor(.white)
+                        .font(.system(size: 24))
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .padding([.leading, .bottom], 16.0)
+                    ZStack {
+                        ScrollView(.horizontal, showsIndicators: true){
+                            HStack(spacing: 8){
+                                ForEach((0...3), id: \.self) {
+                                    let id = ($0)
+                                    RewardCardView(reward: prices[id], n: id)
+                                }
+                            }
+                        }.padding(.leading, 16.0)
+                    }.padding(.bottom, 24.0)
+                    Text("Sua pontuação")
                         .foregroundColor(.white)
                         .font(.system(size: 24))
                         .fontWeight(.bold)
                         .padding(.top, 16.0)
                         .padding()
+                        .frame(height:40)
                     List{
                         ForEach((1...3), id: \.self) {
                             let id = ($0)
@@ -43,7 +60,10 @@ struct ScoreView: View {
                             ScoreCard(n: id)
                         }
                     }
-                }.background(Color.black.ignoresSafeArea())
+                }
+                .padding(.top, 16.0)
+                .background(Color.black.ignoresSafeArea())
+                
                 
             }.navigationBarHidden(true)
         }
@@ -65,10 +85,11 @@ struct ScoreCard: View {
                 .resizable()
                 .frame(width: 80, height: 80)
                 .ignoresSafeArea()
+                
             VStack (alignment: .leading, spacing: 16){
                 Text("24 pontos")
                     .foregroundColor(.white)
-                    .font(.system(size: 24))
+                    .font(.system(size: 22))
                     .fontWeight(.bold)
                     .frame(height: 20)
                     .padding(.top, 2.0)
@@ -77,6 +98,7 @@ struct ScoreCard: View {
                     .font(.system(size: 14))
                     .frame(height: 10)
             }
+            .padding(.leading, 16.0)
             Spacer()
         }
         .background(Color.gray.opacity(0.3))

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		731569E32642B77B00412662 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731569E22642B77B00412662 /* QRCode.swift */; };
 		731569E72642D17D00412662 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731569E62642D17D00412662 /* ScoreView.swift */; };
+		731569ED2645733300412662 /* RewardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731569EC2645733300412662 /* RewardCardView.swift */; };
 		73923B3C2641A9650015E952 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73923B3B2641A9650015E952 /* EventCardView.swift */; };
 		73D185A22640714F002CCB64 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D185A12640714F002CCB64 /* EventDetailView.swift */; };
 		854BB6CC263EE9EB007E4813 /* ExploreEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BB6CB263EE9EB007E4813 /* ExploreEventsView.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		731569E22642B77B00412662 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		731569E62642D17D00412662 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		731569EC2645733300412662 /* RewardCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCardView.swift; sourceTree = "<group>"; };
 		73923B3B2641A9650015E952 /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
 		73D185A12640714F002CCB64 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		854BB6CB263EE9EB007E4813 /* ExploreEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEventsView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				854BB6CB263EE9EB007E4813 /* ExploreEventsView.swift */,
 				CAB193C4263ADFBE00E27B22 /* BaseView.swift */,
+				731569EC2645733300412662 /* RewardCardView.swift */,
 				73D185A12640714F002CCB64 /* EventDetailView.swift */,
 				731569E62642D17D00412662 /* ScoreView.swift */,
 				731569E22642B77B00412662 /* QRCode.swift */,
@@ -198,6 +201,7 @@
 				CAB193C3263ADFBE00E27B22 /* laFiestaApp.swift in Sources */,
 				CAFD1A04264405E20053921C /* LocalCardView.swift in Sources */,
 				731569E32642B77B00412662 /* QRCode.swift in Sources */,
+				731569ED2645733300412662 /* RewardCardView.swift in Sources */,
 				73923B3C2641A9650015E952 /* EventCardView.swift in Sources */,
 				73D185A22640714F002CCB64 /* EventDetailView.swift in Sources */,
 				CA8130F626416FC0002B218B /* HomeView.swift in Sources */,
