@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseView: View {
-    @State var selectedView = 2
+    @State var selectedView = 1
    
     
     init() {
