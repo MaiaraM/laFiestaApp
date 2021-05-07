@@ -16,7 +16,7 @@ struct HomeView: View {
         events = eventsData;
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        
+        UINavigationBar.appearance().backgroundColor = .clear
     }
     
     var body: some View {
@@ -58,7 +58,9 @@ struct HomeView: View {
                 }.padding()
                 .navigationBarHidden(true)
             }
-        }
+            
+        }.colorScheme(.dark)
+        
     }
 }
 

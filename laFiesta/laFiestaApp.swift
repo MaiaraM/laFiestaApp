@@ -11,7 +11,7 @@ import SwiftUI
 struct laFiestaApp: App {
     var body: some Scene {
         WindowGroup {
-            PreLauch()
+            PreLauch().environment(\.colorScheme, .dark)
         }
     }
 }

@@ -12,7 +12,7 @@ struct BaseView: View {
    
     
     init() {
-        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.3882352941, green: 0.3882352941, blue: 0.4, alpha: 1)
+        UITabBar.appearance().barTintColor = UIColor(named: "AppBarColor")
     }
     
     var body: some View {
@@ -53,7 +53,7 @@ struct BaseView: View {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
                 .tag(4)
-            }.accentColor(Color(#colorLiteral(red: 0.2980392157, green: 0.8156862745, blue: 0.8, alpha: 1)))
+            }.accentColor(Color(#colorLiteral(red: 0.2980392157, green: 0.8156862745, blue: 0.8, alpha: 1))).colorScheme(.dark)
         }
 }
 
