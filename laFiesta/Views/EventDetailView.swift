@@ -10,29 +10,42 @@ import SwiftUI
 struct EventDetailView: View {
     var eventSelected: EventModel
     let tableTitles = ["Date", "Time", "Place", "Price"]
-    
+    @State var saved : Bool = true
     
     var body: some View {
             ScrollView{
                 VStack{
                     ZStack(alignment: .topLeading) {
                         Color.clear
+                        
                         VStack(alignment: .leading) {
                             
-                            Text(verbatim: eventSelected.name)
-                                .foregroundColor(.white)
-                                .font(.system(size: 34))
-                                .fontWeight(.bold)
-                                .padding(.bottom)
-                                .padding(.top, 250.0)
+                            HStack{
+                                Text(verbatim: eventSelected.name)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 34))
+                                    .fontWeight(.bold)
+                                    .padding(.bottom)
+                                    .padding(.top, 250.0)
+                                
+                                Button(action: {
+                                    self.saved = !self.saved
+                                }, label: {
+                                    Image(systemName: self.saved ? "heart.fill" : "heart")
+                                    .resizable()
+                                    .padding(10)
+                                    .scaledToFill()
+                                    .frame(width:40,height: 40, alignment: .center)
+                                    .foregroundColor(.white)
+                                    .background(Color(#colorLiteral(red: 0.06796951864, green: 0.04477881282, blue: 0.0748642597, alpha: 0.6573518006)).cornerRadius(22))
+                                }).padding(.top, 235.0)
+                            }
                             
                             Text("Organization Name")
                                 .foregroundColor(.white)
                                 .font(.system(size: 15))
                                 .fontWeight(.bold)
                                 .padding(.bottom)
-                            
-                            
                         }
                     }
                     .background(Image(uiImage: UIImage(named: "COVER")!)
