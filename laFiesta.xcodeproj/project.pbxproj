@@ -33,6 +33,7 @@
 		73D185A12640714F002CCB64 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		854BB6CB263EE9EB007E4813 /* ExploreEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEventsView.swift; sourceTree = "<group>"; };
 		854BB6CF263F491C007E4813 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		857D597726458B4F009F4C86 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CA415DFB2644201D005B8893 /* PreLauch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLauch.swift; sourceTree = "<group>"; };
 		CA8130F526416FC0002B218B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CA8130F726417B09002B218B /* laFiesta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = laFiesta.json; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		CAB193B6263ADFBE00E27B22 = {
 			isa = PBXGroup;
 			children = (
+				857D597726458B4F009F4C86 /* .gitignore */,
 				CAB193D2263AE07E00E27B22 /* README.md */,
 				CAB193C1263ADFBE00E27B22 /* laFiesta */,
 				CAB193C0263ADFBE00E27B22 /* Products */,

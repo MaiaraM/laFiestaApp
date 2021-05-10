@@ -11,7 +11,8 @@ struct ExploreEventsView: View {
     }
     
     @State public var search: String = ""
-    
+    @State private var isEditing = false
+
     var body: some View {
         NavigationView{
             ZStack{
@@ -35,33 +36,79 @@ struct ExploreEventsView: View {
                         Spacer()
                     }
 
+//                    HStack{
+//                        Image(systemName: "magnifyingglass")
+//                            .foregroundColor(.secondary)
+////                            .offset(x: 10)
+//
+//                        TextField("Search...", text: $search)
+//                            .padding(7)
+////                            .padding(.horizontal, 2)
+//                            .background(Color(#colorLiteral(red: 0.462745098, green: 0.462745098, blue: 0.5019607843, alpha: 1)))
+//                            .background(Color.white)
+//                            .cornerRadius(8)
+////                            .padding(.horizontal, 2)
+//                            .onTapGesture {
+//                                self.search = " "
+//                            }
+//
+//                        if search != "" {
+//                            Button(action: {
+//                                self.search = ""
+//
+//                            }) {
+//                                Text("Cancel")
+//                            }
+//                            .padding(.trailing, 5)
+//                            .transition(.move(edge: .trailing))
+//                            .animation(.default)
+//                        }
+//                    }
+//                    .background(Capsule().fill(Color.white))
 
-                    ZStack(alignment: .leading) {
-                        TextField("Search...", text: $search)
-                            .background(Color(#colorLiteral(red: 0.462745098, green: 0.462745098, blue: 0.5019607843, alpha: 1)))
-                            .font(.system(size: 17))
-                            .foregroundColor(Color(#colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 1)))
-
-                            if search == "" {
-                                HStack{
-                                    Image(systemName: "magnifyingglass")
-                                        .foregroundColor(Color(#colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 1)))
-
-                                    Text("Search...").foregroundColor(Color(#colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9607843137, alpha: 1)))
-                                }.font(.system(size: 17))
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(Color(#colorLiteral(red: 0.92, green: 0.92, blue: 0.96, alpha: 0.6)))
+                            .offset(x: 15)
+                        
+                        ZStack(alignment: .leading){
+                            Text("Search...").font(.system(size: 17, weight: .regular)).foregroundColor(Color(#colorLiteral(red: 0.92, green: 0.92, blue: 0.96, alpha: 0.6)))
+                                .tracking(-0.41)
+                                .offset(x: 20)
+                            
+                            TextField("Search...", text: $search)
+                                .padding(7)
+                                .padding(.horizontal, 2)
+                                .cornerRadius(8)
+                                .padding(.horizontal, 10)
+                                .onTapGesture {
+                                    self.isEditing = true
+                                }
+                        }
+                        
+             
+                        if isEditing {
+                            Button(action: {
+                                self.isEditing = false
+                                self.search = ""
+             
+                            }) {
+                                Text("Cancel")
                             }
-                    }.padding(.bottom)
+                            .padding(.trailing, 10)
+                            .transition(.move(edge: .trailing))
+                            .animation(.default)
+                            .foregroundColor(Color(#colorLiteral(red: 0.92, green: 0.92, blue: 0.96, alpha: 0.6)))
+                        }
+                    }
+                    .padding(.bottom, 3)
+                    .background(Capsule().fill(Color(#colorLiteral(red: 0.462745098, green: 0.462745098, blue: 0.5019607843, alpha: 0.24))))
 
                     ZStack {
-                        if search == "" {
-                            ScrollView(){
-                                ForEach(events2, id: \.self) { event in
-                                    EventCardView(eventForCard: event)
-                                }
+                        ScrollView(){
+                            ForEach(events2, id: \.self) { event in
+                                EventCardView(eventForCard: event)
                             }
-                        }
-                        else{
-
                         }
                     }
                 }.padding()
